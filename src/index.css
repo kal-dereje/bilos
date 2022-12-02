@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header-font {
+  @apply font-Pacifico;
+}
+.nav-font {
+  @apply font-Courgette font-light;
+}
+
+.text-font {
+  @apply font-Kanit;
+}
