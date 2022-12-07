@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply box-border scroll-smooth snap-y;
+}
 .header-font {
   @apply font-Pacifico;
 }
