@@ -14,12 +14,12 @@ function Menu() {
   return (
     <div
       id="Menu"
-      className="min-h-screen flex flex-col items-center gap-10 pt-32 bg-emerald-200"
+      className="min-h-screen flex flex-col items-center gap-10 pt-32 bg-green-100"
     >
-      <h1 className="text-Bilos-third font-Pacifico text-4xl">
+      <h1 className="text-Bilos-third font-Pacifico text-4xl text-center">
         Check our tasty <span className="text-Bilos-primary">Menu</span>
       </h1>
-      <div className="flex w-full lg:w-1/2 md:2/3 items-center gap-3 justify-center font-Kanit">
+      <div className="flex flex-wrap w-full sm:flex-nowrap lg:w-1/2 md:2/3 items-center gap-3 justify-center font-Kanit">
         <button
           onClick={handelMenuClick}
           className={`${state["Show All"]} ${

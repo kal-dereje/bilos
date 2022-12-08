@@ -5,8 +5,6 @@ module.exports = {
     extend: {
       animation: {
         "ping-slow": "ping 2s linear infinite",
-        "spin-menu": "spin 0.4s linear ",
-        wiggle: "wiggle 0.7s ease-in-out ",
         grow: "grow 0.4s linear",
       },
       boxShadow: {
@@ -31,15 +29,10 @@ module.exports = {
         },
       },
       keyframes: {
-        wiggle: {
-          "0%, 100%": { transform: "rotate(-3deg)" },
-          "50%": { transform: "rotate(3deg)" },
-        },
         grow: {
           "100%": { transform: "scale(1)" },
           "50%": { transform: "scale(0.5)" },
           "0%": { transform: "scale(0)" },
-
           "100%": { transform: "scale(1)" },
         },
       },
