@@ -6,7 +6,7 @@ function Home() {
     <div
       id="Home"
       className="
-      h-[100vh] relative    text-white bg-[url('./assests/images/cup.png')] "
+      h-[100vh] relative    text-white bg-[url('./assests/images/cup.png')]  "
     >
       <div className="absolute h-[100vh] w-full bg-black bg-opacity-50"></div>
       <Header />
@@ -23,12 +23,18 @@ function Home() {
           relief as.
         </p>
         <div className="font-Kanit text:lg  sm:text-xl font-normal flex gap-8">
-          <button className="bg-transparent py-2 px-8 border-2 rounded-full border-Bilos-primary hover:bg-Bilos-primary transition-all ease-linear duration-200 hover:scale-105 ">
+          <a
+            href="#Menu"
+            className="bg-transparent py-2 px-8 border-2 rounded-full border-Bilos-primary hover:bg-Bilos-primary transition-all ease-linear duration-200 hover:scale-105 "
+          >
             Our Menu
-          </button>
-          <button className="bg-transparent py-2 px-8 border-2 rounded-full border-Bilos-primary  hover:bg-Bilos-primary transition-all ease-linear duration-200 hover:scale-105 ">
+          </a>
+          <a
+            href="#Location"
+            className="bg-transparent py-2 px-8 border-2 rounded-full border-Bilos-primary  hover:bg-Bilos-primary transition-all ease-linear duration-200 hover:scale-105 "
+          >
             Location
-          </button>
+          </a>
         </div>
       </div>
     </div>

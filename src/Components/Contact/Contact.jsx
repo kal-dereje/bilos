@@ -30,8 +30,8 @@ function Contact() {
   };
 
   return (
-    <div id="Contact" className=" sm:m-10 flex flex-col ">
-      <div className="justify-center flex flex-col items-center ">
+    <div id="Contact" className=" sm:m-10 flex flex-col bg-orange-50">
+      <div className="m-10 justify-center flex flex-col items-center ">
         <h1 className=" header-font text-3xl  ">
           <span className=" text-Bilos-primary">Contact</span>
           <span className=" text-Bilos-third"> Us</span>{" "}
@@ -44,10 +44,10 @@ function Contact() {
       </div>
 
       <div
-        className="bg-[url('./assests/images/contactback.png')]
- bg-cover bg-center justify-between flex  flex-wrap relative mt-24 sm:p-10 shadow-Bilos-secondary shadow-sm rounded-2xl"
+        className="bg-[url('./assests/images/contactback.png')] cursor-pointer
+ bg-cover bg-center justify-between  flex  flex-wrap relative mt-24 sm:p-10 shadow-Bilos-secondary shadow-sm rounded-2xl"
       >
-        <div className=" flex-col  relative items-center  w-full  rounded-2xl shadow-2xl bg-orange-200 bg-opacity-30">
+        <div className="  relative items-center    rounded-2xl shadow-2xl bg-orange-200 bg-opacity-30">
           <div className="flex p-4 sm:m-8 w-72 transition  ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300 ">
             <GoLocation className=" hover:bg-Bilos-primary hover:text-white text-Bilos-primary text-4xl m-2 rounded-full border-0 p-2 bg-orange-100 " />
             <div className="flex flex-col text-Bilos-third">

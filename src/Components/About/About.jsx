@@ -4,7 +4,7 @@ import Right from "./RightSection";
 
 function About() {
   return (
-    <div id="About" className="bg-green-100">
+    <div id="About" className="bg-orange-50">
       <div className=" flex flex-col gap-10 lg:gap-0 lg:flex-row items-center ">
         <Left />
         <Right />

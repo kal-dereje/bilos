@@ -42,7 +42,7 @@ function Header() {
   };
 
   return (
-    <div className="flex justify-around sm:justify-between sm:px-14   lg:px-0 lg:justify-around   items-center py-5 bg-black bg-opacity-80 text-white fixed top-0 w-full z-30 ">
+    <div className="flex justify-around sm:justify-between sm:px-14   lg:px-0 lg:justify-around   items-center py-5 bg-black bg-opacity-60 text-white fixed top-0 w-full z-30 ">
       <div className="flex flex-nowrap gap-2 items-center cursor-pointer">
         <div className="bg-white rounded-full">
           <img className="w-12  " src={LogoOne} alt="Logo" />
@@ -58,7 +58,7 @@ function Header() {
       >
         <ul
           className={
-            "flex flex-col justify-center items-center h-full w-full  lg:flex-row lg:justify-self-auto gap-8   text-lg font-Courgette "
+            "flex flex-col justify-center items-center h-full w-full  lg:flex-row lg:justify-self-auto gap-8     font-sans  "
           }
         >
           <Anchor
@@ -101,7 +101,7 @@ function Header() {
           />
         </ul>
       </nav>
-      <button className=" px-12 py-2 bg-Bilos-primary rounded-full font-Courgette font-semibold transition-all ease-linear duration-200 hover:scale-105 hover:bg-orange-500 hidden lg:block">
+      <button className=" px-6 py-2 bg-Bilos-primary rounded-full font-sans font-semibold transition-all ease-linear duration-200 hover:scale-105 hover:bg-orange-500 hidden lg:block">
         Location
       </button>
       {state["List Click"] ? (

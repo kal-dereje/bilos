@@ -26,9 +26,9 @@ export const headerState = {
 
 export const menuState = {
   "Show All": "",
-  Starters: "",
-  Salad: "",
-  Specialty: "",
+  Torta: "",
+  Cakes: "",
+  "Hot Drinks": "",
 };
 
 export const reducer = (state, action) => {
@@ -64,11 +64,11 @@ export const reducer = (state, action) => {
         ...menuState,
         "Show All": "bg-Bilos-primary text-white  ",
       };
-    case "Starters":
+    case "Torta":
       return { ...menuState, Starters: "bg-Bilos-primary text-white" };
-    case "Salad":
+    case "Cakes":
       return { ...menuState, Salad: "bg-Bilos-primary text-white" };
-    case "Specialty":
+    case "Hot Drinks":
       return { ...menuState, Specialty: "bg-Bilos-primary text-white" };
     case "List Click":
       return {
