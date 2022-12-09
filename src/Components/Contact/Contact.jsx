@@ -30,7 +30,7 @@ function Contact() {
   };
 
   return (
-    <div className=" sm:m-10 flex flex-col ">
+    <div id="Contact" className=" sm:m-10 flex flex-col ">
       <div className="justify-center flex flex-col items-center ">
         <h1 className=" header-font text-3xl  ">
           <span className=" text-Bilos-primary">Contact</span>
@@ -55,7 +55,7 @@ function Contact() {
                 {" "}
                 Location:{" "}
               </h3>
-              <p className="flex-col w-40 text-Bilos-fourth text-font">
+              <div className="flex-col w-40 text-Bilos-fourth text-font">
                 <div className="flex mb-4">
                   <AiOutlineArrowRight className="bg-Bilos-primary rounded-full text-white m-2" />
                   Atlas branch | አትላስ <br />
@@ -83,7 +83,7 @@ function Contact() {
                   Karl Square | ካርል አደባባይ
                   <br />
                 </div>
-              </p>
+              </div>
             </div>
           </div>
 
