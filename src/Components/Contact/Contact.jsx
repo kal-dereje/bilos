@@ -30,7 +30,7 @@ function Contact() {
   };
 
   return (
-    <div id="Contact" className=" sm:m-10 flex flex-col ">
+    <div className=" sm:m-10 flex flex-col ">
       <div className="justify-center flex flex-col items-center ">
         <h1 className=" header-font text-3xl  ">
           <span className=" text-Bilos-primary">Contact</span>
@@ -47,7 +47,7 @@ function Contact() {
         className="bg-[url('./assests/images/contactback.png')]
  bg-cover bg-center justify-between flex  flex-wrap relative mt-24 sm:p-10 shadow-Bilos-secondary shadow-sm rounded-2xl"
       >
-        <div className="  relative items-center  w-full sm:w-auto  rounded-2xl shadow-2xl bg-orange-200 bg-opacity-30">
+        <div className=" flex-col  relative items-center  w-full  rounded-2xl shadow-2xl bg-orange-200 bg-opacity-30">
           <div className="flex p-4 sm:m-8 w-72 transition  ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300 ">
             <GoLocation className=" hover:bg-Bilos-primary hover:text-white text-Bilos-primary text-4xl m-2 rounded-full border-0 p-2 bg-orange-100 " />
             <div className="flex flex-col text-Bilos-third">
@@ -55,7 +55,7 @@ function Contact() {
                 {" "}
                 Location:{" "}
               </h3>
-              <div className="flex-col w-40 text-Bilos-fourth text-font">
+              <p className="flex-col w-40 text-Bilos-fourth text-font">
                 <div className="flex mb-4">
                   <AiOutlineArrowRight className="bg-Bilos-primary rounded-full text-white m-2" />
                   Atlas branch | አትላስ <br />
@@ -83,7 +83,7 @@ function Contact() {
                   Karl Square | ካርል አደባባይ
                   <br />
                 </div>
-              </div>
+              </p>
             </div>
           </div>
 
