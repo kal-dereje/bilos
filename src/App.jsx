@@ -5,6 +5,9 @@ import Menu from "./Components/Menu/Menu";
 import { reducer, ACTION, headerState } from "./reducer";
 import Location from "./Components/Location/Location";
 import Contact from "./Components/Contact/Contact";
+import Specials from "./Components/Specials/Specials";
+import Events from "./Components/Events/Events";
+import Gallery from "./Components/Gallery/Gallery";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, headerState);
@@ -14,8 +17,11 @@ function App() {
       <Home />
       <About />
       <Menu />
-      <Contact/>
-      <Location/>
+      <Specials />
+      <Events />
+      <Gallery />
+      <Contact />
+      <Location />
     </div>
   );
 }

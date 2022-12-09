@@ -1,5 +1,5 @@
 function Gallery() {
-  return <div>gallery section</div>;
+  return <div id="Gallery">gallery section</div>;
 }
 
 export default Gallery;

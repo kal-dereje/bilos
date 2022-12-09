@@ -13,7 +13,7 @@ function About() {
         <h1 className="font-Pacifico text-3xl text-slate-800 text-center">
           Why choose Our Restaurant
         </h1>
-        <p className="font-Kanit font-bold text-center w-1/3 text-Bilos-third">
+        <p className="font-Kanit font-bold text-center w-3/5 sm:w-2/5 text-Bilos-third">
           Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
           adipisci expedita at voluptas atque vitae autem.
         </p>

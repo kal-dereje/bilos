@@ -13,19 +13,25 @@ function Header() {
       let about = document.getElementById("About").getBoundingClientRect().top;
       let menu = document.getElementById("Menu").getBoundingClientRect().top;
       let specials = document
-        .getElementById("Menu")
+        .getElementById("Specials")
         .getBoundingClientRect().top;
-      let events = document.getElementById("Menu").getBoundingClientRect().top;
-      let gallery = document.getElementById("Menu").getBoundingClientRect().top;
-      let contact = document.getElementById("Menu").getBoundingClientRect().top;
+      let events = document
+        .getElementById("Events")
+        .getBoundingClientRect().top;
+      let gallery = document
+        .getElementById("Gallery")
+        .getBoundingClientRect().top;
+      let contact = document
+        .getElementById("Contact")
+        .getBoundingClientRect().top;
 
       if (about > 50) dispatch({ type: ACTION.HOME });
       else if (menu > 50) dispatch({ type: ACTION.ABOUT });
-      else dispatch({ type: ACTION.MENU });
-      // else if (specials > 50) dispatch({ type: ACTION.MENU });
-      // else if (events > 50) dispatch({ type: ACTION.SPECIALS });
-      // else if (gallery > 0) dispatch({ type: ACTION.EVENTS });
-      // else if (contact > 0) dispatch({ type: ACTION.GALLERY });
+      else if (specials > 50) dispatch({ type: ACTION.MENU });
+      else if (events > 50) dispatch({ type: ACTION.SPECIALS });
+      else if (gallery > 50) dispatch({ type: ACTION.EVENTS });
+      else if (contact > 50) dispatch({ type: ACTION.GALLERY });
+      else dispatch({ type: ACTION.CONTACT });
     }
     window.addEventListener("scroll", handelScroll);
     return () => window.removeEventListener("scroll", handelScroll);
@@ -109,7 +115,7 @@ function Header() {
         <button onClick={handelListClick}>
           <BsList
             size={40}
-            className="text-Bilos-primary lg:hidden cursor-pointer relative z-40"
+            className="text-Bilos-primary lg:hidden cursor-pointer relative z-40 "
           />
         </button>
       )}
