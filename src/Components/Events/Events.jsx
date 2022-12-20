@@ -1,5 +1,5 @@
 function Events() {
-  return <div id="Events">Event section</div>;
+  return <div id="Events">maki</div>;
 }
 
 export default Events;
