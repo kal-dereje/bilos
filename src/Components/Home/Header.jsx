@@ -12,9 +12,6 @@ function Header() {
     function handelScroll(e) {
       let about = document.getElementById("About").getBoundingClientRect().top;
       let menu = document.getElementById("Menu").getBoundingClientRect().top;
-      let specials = document
-        .getElementById("Specials")
-        .getBoundingClientRect().top;
       let events = document
         .getElementById("Events")
         .getBoundingClientRect().top;
@@ -27,12 +24,12 @@ function Header() {
 
       if (about > 50) dispatch({ type: ACTION.HOME });
       else if (menu > 50) dispatch({ type: ACTION.ABOUT });
-      else if (specials > 50) dispatch({ type: ACTION.MENU });
-      else if (events > 50) dispatch({ type: ACTION.SPECIALS });
+      else if (events > 50) dispatch({ type: ACTION.MENU });
       else if (gallery > 50) dispatch({ type: ACTION.EVENTS });
       else if (contact > 50) dispatch({ type: ACTION.GALLERY });
       else dispatch({ type: ACTION.CONTACT });
     }
+
     window.addEventListener("scroll", handelScroll);
     return () => window.removeEventListener("scroll", handelScroll);
   });
@@ -75,12 +72,6 @@ function Header() {
             onclick={() => dispatch({ type: ACTION.MENU })}
             title="Menu"
             state={state.Menu}
-          />
-
-          <Anchor
-            onclick={() => dispatch({ type: ACTION.SPECIALS })}
-            title="Specials"
-            state={state.Specials}
           />
 
           <Anchor
