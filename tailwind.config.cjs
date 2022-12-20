@@ -11,7 +11,7 @@ module.exports = {
         custom: "0 0 10px 2px rgba(192, 192, 192, 0.5)",
       },
       backgroundImage: {
-        "hero-pattern": "url('/assests/cup.png')",
+        "hero-pattern": "url('./assests/images/cup.png')",
       },
       fontFamily: {
         Pacifico: ["Pacifico", "cursive"],
