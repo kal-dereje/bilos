@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import { AiFillPlayCircle } from "react-icons/ai";
 
 function Home() {
   return (
@@ -25,16 +26,17 @@ function Home() {
         <div className="font-Kanit text:lg  sm:text-xl font-normal flex gap-8">
           <a
             href="#Menu"
-            className="bg-transparent py-2 px-8 border-2 rounded-full border-Bilos-primary hover:bg-Bilos-primary transition-all ease-linear duration-200 hover:scale-105 "
+            className="bg-transparent py-1 px-8 border-2 rounded-full border-Bilos-primary hover:bg-Bilos-primary transition-all ease-linear duration-200 hover:scale-105 "
           >
             Our Menu
           </a>
-          <a
-            href="#Location"
-            className="bg-transparent py-2 px-8 border-2 rounded-full border-Bilos-primary  hover:bg-Bilos-primary transition-all ease-linear duration-200 hover:scale-105 "
-          >
-            Location
-          </a>
+          <a  href='#About'
+          className=" text-white  flex transition-all ease-linear duration-200 hover:scale-105 py-1 gap-2 hover:text-Bilos-primary cursor-pointer " >
+                <div className="">
+                  <AiFillPlayCircle size="30" />
+                </div>
+                Watch Video
+              </a>
         </div>
       </div>
     </div>

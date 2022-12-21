@@ -1,312 +1,116 @@
-const menuList = [
+ const menuList = [
   {
-    menu: "White Torta",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Double Chocolate Torta",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Double Chocolate Torta",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Red Velvet",
-    price: "1000.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "White Chocolate Torta",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Coffee Torta",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Millefoglie Torta",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "White Chocolate",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Strawberry Torta",
-    price: "1000.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Fasting Tiramisu Torta",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Double Chocolate",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Chocolate Mousse",
-    price: "1000.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Black Torta",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "White Torta",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Bilos Special",
-    price: "820.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Torta",
-  },
-  {
-    menu: "Bilo's Special",
-    price: "80.00 Br",
-    descripton:
-      "A delicate crab cake served on a toasted roll with lettuce and tartar sauce",
+    id: 1,
+    menu: "BlackForest",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/BlackForedt.jpg",
+    price: "75Birr",
     type: "Cakes",
   },
   {
-    menu: "Black Slice",
-    price: "80.00 Br",
-    descripton:
-      "A delicate crab cake served on a toasted roll with lettuce and tartar sauce",
+    id: 2,
+    menu: "corassent",
+    description: "coloring tekorach,creams yougert",
+    img:'/MenuImages/corassent.jpg',
+    price: "50Birr",
     type: "Cakes",
   },
-  {
-    menu: "Fruit Tart",
-    price: "60.00 Br",
-    descripton:
-      "A delicate crab cake served on a toasted roll with lettuce and tartar sauce",
-    type: "Cakes",
-  },
-  {
-    menu: "Coffee Slice",
-    price: "80.00 Br",
-    descripton:
-      "A delicate crab cake served on a toasted roll with lettuce and tartar sauce",
-    type: "Cakes",
-  },
-  {
-    menu: "Red Velvet",
-    price: "90.00 Br",
-    descripton:
-      "A delicate crab cake served on a toasted roll with lettuce and tartar sauce",
-    type: "Cakes",
-  },
-  {
-    menu: "White Slice",
-    price: "80.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Cakes",
-  },
-  {
-    menu: "Millefoglie",
-    price: "90.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Cakes",
-  },
-  {
-    menu: "Cinnamon",
-    price: "50.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Cakes",
-  },
-  {
+ {
+    id: 3,
     menu: "Orange",
-    price: "50.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/Orange.jpg",
+    price: "50Birr",
     type: "Cakes",
   },
   {
-    menu: "Palmier Cookie's",
-    price: "50.00 Br",
-    descripton:
-      "Grilled chicken with provolone, artichoke hearts, and roasted red pesto",
-    type: "cake",
+    id: 4,
+    menu: "WhiteTorta",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/WhiteTorta.jpg",
+    price: "75Birr",
+    type: "Torta",
   },
   {
-    menu: "Croissant",
-    price: "50.00 Br",
-    descripton: "Lorem, deren, trataro, filede, nerada",
-    type: "Cakes",
-  },
-  {
-    menu: "Boxegna Puff",
-    price: "60.00 Br",
-    descripton: "Fresh spinach, crisp romaine, tomatoes, and Greek olives",
-    type: "Cakes",
-  },
-  {
-    menu: "Apple Slice",
-    price: "80.00 Br",
-    descripton:
-      "Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette",
-    type: "Cakes",
-  },
-  {
-    menu: "Apple Turnover",
-    price: "50.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Cakes",
-  },
-  {
-    menu: "Cannoli Puff",
-    price: "60.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Cakes",
-  },
-  {
-    menu: "Chocolate Croissant",
-    price: "50.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Cakes",
-  },
-  {
-    menu: "Apple Turnover",
-    price: "50.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Cakes",
-  },
-  {
-    menu: "Jam Tart / Brownie / Doughnut",
-    price: "50.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Cakes",
-  },
-  {
-    menu: "Venus Pufff",
-    price: "60.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Cakes",
-  },
-  {
-    menu: "White Slice",
-    price: "80.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Cakes",
-  },
-  {
-    menu: "Brioche",
-    price: "80.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Cakes",
-  },
-  {
-    menu: "White Slice",
-    price: "80.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Cakes",
-  },
-  {
+    id: 5,
     menu: "Macchiato",
-    price: "30.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/Macchiato.jpg",
+    price: "75Birr",
     type: "Hot Drinks",
   },
   {
-    menu: "Cafe Latte",
-    price: "40.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
+    id: 6,
+    menu: "SpecialTea",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/SpecialTea.jpg",
+    price: "50Birr",
     type: "Hot Drinks",
   },
   {
-    menu: "Hot Chocolate",
-    price: "45.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
+    id: 7,
+    menu: "Milk",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/milk.jpg",
+    price: "40Birr",
     type: "Hot Drinks",
   },
   {
+    id: 8,
     menu: "Spreeze",
-    price: "30.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/Spreeze.jpg",
+    price: "75Birr",
     type: "Hot Drinks",
   },
   {
-    menu: "Coffee",
-    price: "30.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Hot Drinks",
-  },
-  {
-    menu: "Millk",
-    price: "40.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Hot Drinks",
-  },
-  {
-    menu: "Special tea with/without Alcohol",
-    price: "60.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Hot Drinks",
-  },
-  {
+    id: 9,
     menu: "Tea",
-    price: "20.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/Tea.jpg",
+    price: "75Birr",
     type: "Hot Drinks",
   },
   {
-    menu: "Tea With Lemon",
-    price: "20.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Hot Drinks",
+    id: 10,
+    menu: "Millefoglie",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/SpecialTea.jpg",
+    price: "50Birr",
+    type: "Cakes",
   },
   {
-    menu: "Ginger tea/esher tea",
-    price: "20.00 Br",
-    descripton:
-      "Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-    type: "Hot Drinks",
+    id: 11,
+    menu: "Milkcoffee",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/milk.jpg",
+    price: "40Birr",
+    type: "Torta",
   },
+  {
+    id: 12,
+    menu: "VanillaTorta",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/Spreeze.jpg",
+    price: "75Birr",
+    type: "Torta",
+  },
+  {
+    id: 13,
+    menu: "BilosSpecial",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/BilosSpecial.jpg",
+    price: "75Birr",
+    type: "Torta",
+  },
+  {
+    id: 14,
+    menu: "BoxegnaPuff",
+    description: "coloring tekorach,creams yougert",
+    img: "/MenuImages/Boxegnapuff.jpg",
+    price: "75Birr",
+    type: "Cakes",
+  },
+ 
 ];
-
-export default menuList;
+ export default menuList;
