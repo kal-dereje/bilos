@@ -12,9 +12,6 @@ function Header() {
     function handelScroll(e) {
       let about = document.getElementById("About").getBoundingClientRect().top;
       let menu = document.getElementById("Menu").getBoundingClientRect().top;
-      let specials = document
-        .getElementById("Specials")
-        .getBoundingClientRect().top;
       let events = document
         .getElementById("Events")
         .getBoundingClientRect().top;
@@ -27,22 +24,25 @@ function Header() {
 
       if (about > 50) dispatch({ type: ACTION.HOME });
       else if (menu > 50) dispatch({ type: ACTION.ABOUT });
-      else if (specials > 50) dispatch({ type: ACTION.MENU });
-      else if (events > 50) dispatch({ type: ACTION.SPECIALS });
+      else if (events > 50) dispatch({ type: ACTION.MENU });
       else if (gallery > 50) dispatch({ type: ACTION.EVENTS });
       else if (contact > 50) dispatch({ type: ACTION.GALLERY });
       else dispatch({ type: ACTION.CONTACT });
     }
+
     window.addEventListener("scroll", handelScroll);
     return () => window.removeEventListener("scroll", handelScroll);
   });
-
+const navigation = ["Home", "About", "Menu", "Events", "Gallery", "Contact"];
   const handelListClick = () => {
     dispatch({ type: ACTION.LISTCLICK });
   };
-
+const dispachAction=(action)=>{
+handelListClick()
+ dispatch({ type:action });
+}
   return (
-    <div className="flex justify-around sm:justify-between sm:px-14   lg:px-0 lg:justify-around   items-center py-5 bg-black bg-opacity-60 text-white fixed top-0 w-full z-30 ">
+    <div className="flex justify-around sm:justify-between sm:px-14   lg:px-0 lg:justify-around   items-center py-2 bg-black bg-opacity-60 text-white fixed top-0 w-full z-30 ">
       <div className="flex flex-nowrap gap-2 items-center cursor-pointer">
         <div className="bg-white rounded-full">
           <img className="w-12  " src={LogoOne} alt="Logo" />
@@ -61,64 +61,32 @@ function Header() {
             "flex flex-col justify-center items-center h-full w-full  lg:flex-row lg:justify-self-auto gap-8     font-sans  "
           }
         >
-          <Anchor
-            onclick={() => dispatch({ type: ACTION.HOME })}
-            title="Home"
-            state={state.Home}
-          />
-          <Anchor
-            onclick={() => dispatch({ type: ACTION.ABOUT })}
-            title="About"
-            state={state.About}
-          />
-          <Anchor
-            onclick={() => dispatch({ type: ACTION.MENU })}
-            title="Menu"
-            state={state.Menu}
-          />
 
-          <Anchor
-            onclick={() => dispatch({ type: ACTION.SPECIALS })}
-            title="Specials"
-            state={state.Specials}
-          />
+        {navigation.map((item, index) => {
+            return (
+              <Anchor
+                key={index + 1}
+                onclick={() => dispachAction(item)}
+                title={item}
+                state={state[item]}
+              />
+            );
+          })}
 
-          <Anchor
-            onclick={() => dispatch({ type: ACTION.EVENTS })}
-            title="Events"
-            state={state.Events}
-          />
-
-          <Anchor
-            onclick={() => dispatch({ type: ACTION.GALLERY })}
-            title="Gallery"
-            state={state.Gallery}
-          />
-          <Anchor
-            onclick={() => dispatch({ type: ACTION.CONTACT })}
-            title="Contact"
-            state={state.Contact}
-          />
         </ul>
       </nav>
-      <button className=" px-6 py-2 bg-Bilos-primary rounded-full font-sans font-semibold transition-all ease-linear duration-200 hover:scale-105 hover:bg-orange-500 hidden lg:block">
+      <a 
+        href="#Contact" className=" px-10 py-1 border-Bilos-primary  border-2 rounded-full font-sans font-semibold transition-all ease-linear duration-200 hover:scale-105 hover:bg-orange-500 hidden lg:block">
         Location
-      </button>
-      {state["List Click"] ? (
-        <button onClick={handelListClick}>
-          <RxCross2
-            size={40}
-            className="text-Bilos-primary lg:hidden cursor-pointer relative z-40"
-          />
-        </button>
-      ) : (
+      </a>
+     
         <button onClick={handelListClick}>
           <BsList
             size={40}
             className="text-Bilos-primary lg:hidden cursor-pointer relative z-40 "
           />
         </button>
-      )}
+      
     </div>
   );
 }
