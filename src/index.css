@@ -15,3 +15,15 @@ html {
 .text-font {
   @apply font-Kanit;
 }
+@font-face {
+  font-family: imported;
+  src: url(./font/Lobster-Regular.ttf);
+}
+#one{
+  font-family: imported;
+}
+.myevent{
+  background-image: url(./images/T2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

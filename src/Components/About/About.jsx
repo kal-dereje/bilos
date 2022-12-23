@@ -1,41 +1,97 @@
 import { useState } from "react";
-import Left from "./LeftSection";
-import Right from "./RightSection";
 
-function About() {
+import poster from "../../assests/images/poster.png";
+import video from "../../assests/videos/bilos-video.mp4";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { FaPlay, FaPause } from "react-icons/fa";
+
+const About = () => {
+  const [playButton, setPlayButton] = useState(true);
+  const handelClick = () => {
+    if (playButton) document.getElementById("video").play();
+    else document.getElementById("video").pause();
+
+    setPlayButton((prev) => {
+      return !prev;
+    });
+  };
   return (
-    <div id="About" className="bg-orange-50">
-      <div className=" flex flex-col gap-10 lg:gap-0 lg:flex-row items-center ">
-        <Left />
-        <Right />
+    <div className="  top-0 left-0 w-auto h-auto " id="About">
+      <div className=" relative top-0 left-0   w-screen  h-[91vh] bg-[black]   text-Bilos-primary px-16 z-[1] ">
+        <img
+          src="\images\About2.jpg"
+          className="  absolute top-0 left-32  h-[91vh] w-auto  opacity-20"
+          alt="about"
+        />
+
+        <div className="relative top-10 left-5 text-2xl font-bold font-serif text-Bilos-primary text-opacity-70 ">
+          About_________
+        </div>
+        <div className=" flex-wrap md:flex ">
+          <div class=" relative top-20 w-[45%] text-ld  px-15 text-slate-300  ">
+            <div className="text-3xl mb-3 font-medium sm:text-lg">
+              Bilos is seen as a second home by many not only for their tasty
+              food.
+            </div>
+            but also the warm welcom you recieve the moment you walk in.So by
+            colonel hearted ferrars..<br></br>
+            <div className="flex gap-3 mt-8">
+              <div>
+                <AiFillCheckCircle
+                  size="40"
+                  className="border-2 border-Bilos-primary p-[6px] text-Bilos-primary text-opacity-70  rounded-full "
+                />
+
+                <AiFillCheckCircle
+                  size="40"
+                  className="border-2 border-Bilos-primary p-[6px] text-Bilos-primary text-opacity-70  rounded-full mt-6"
+                />
+
+                <AiFillCheckCircle
+                  size="40"
+                  className="border-2 border-Bilos-primary p-[6px] text-Bilos-primary text-opacity-70  rounded-full mt-8"
+                />
+              </div>
+              <p className="font-semibold p-4">
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <br></br> <br></br> Duis aute irure dolor in reprehenderit in
+                voluptate velit. Ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+                <br></br>
+                <br></br> Duis aute irure dolor in reprehenderit in voluptate
+                trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+                <br></br> <br></br>
+                
+              </p>
+            </div>
+          </div>
+          <div>
+            
+          </div>
+       
+          
+          <div className=" relative  top-5 left-32  transform hover:scale-105 hover:duration-200 w-[45%] mr-5 ">
+          <video
+        id="video"
+        className=" lg:w-11/12 w-[490px] h-[490px] rounded-2xl"
+        poster={poster}
+      >
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute w-full lg:w-11/12  h-full top-0 flex flex-col items-center justify-center">
+        <span onClick={handelClick} className="flex h-20 w-20 relative">
+          <span className="animate-ping-slow  absolute inline-flex h-full w-full rounded-full bg-orange-400  opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-20 w-20 bg-orange-400 items-center justify-center">
+            {playButton && <FaPlay size={18} className="text-white " />}
+            {!playButton && <FaPause size={18} className="text-white" />}
+          </span>
+        </span>
       </div>
-      <div className="flex flex-col justify-center items-center gap-10 mt-32">
-        <h1 className="font-Pacifico text-3xl text-slate-800 text-center">
-          Why choose Our Restaurant
-        </h1>
-        <p className="font-Kanit font-bold text-center w-3/5 sm:w-2/5 text-Bilos-third">
-          Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
-          adipisci expedita at voluptas atque vitae autem.
-        </p>
-        <div className="flex flex-col lg:flex-row justify-center  gap-20">
-          <Box
-            number={"01"}
-            title={"Lorem Ipsum"}
-            descripton=" Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur
-        ducimus vero placeat"
-          />
-          <Box
-            number={"02"}
-            title={"Repellat Nihil"}
-            descripton=" Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur
-        ducimus vero placeat"
-          />
-          <Box
-            number={"03"}
-            title={"Ad ad velit qui"}
-            descripton=" Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur
-        ducimus vero placeat"
-          />
+          </div>
+          <div className="w-20 h-20 border-Bilos-primary border-r-[6px]  border-b-[6px] absolute top-[450px] left-[85%] z-[1] hover:scale-105 hover:duration-200"></div>
+          <div className="w-20 h-20 border-Bilos-primary border-l-[6px]  border-t-[6px] absolute top-[65px] left-[57%] z-[1] hover:scale-105 hover:duration-200"></div>
+         
         </div>
       </div>
     </div>
@@ -43,24 +99,3 @@ function About() {
 }
 
 export default About;
-
-const Box = ({ number, title, descripton }) => {
-  const [bannerColor, setBannerColor] = useState("text-Bilos-primary");
-  return (
-    <div
-      onMouseEnter={() => setBannerColor("text-white")}
-      onMouseLeave={() => setBannerColor("text-Bilos-primary")}
-      className="w-11/12 lg:w-1/4 h-1/3 flex flex-col gap-5 justify-around items-left  px-10 py-12 shadow-custom transition-all duration-300 hover:text-white hover:bg-Bilos-primary cursor-pointer hover:py-6 bg-green-50"
-    >
-      <h1
-        className={
-          "font-Kanit font-extrabold text-3xl  hover:text-white " + bannerColor
-        }
-      >
-        {number}
-      </h1>
-      <h2 className="font-Courgette font-bold text-2xl">{title}</h2>
-      <p className="font-Kanit ">{descripton}</p>
-    </div>
-  );
-};
