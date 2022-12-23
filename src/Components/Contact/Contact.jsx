@@ -30,13 +30,13 @@ function Contact() {
   };
 
   return (
-    <div id='Contact' className=' sm:p-10 flex flex-col bg-orange-50'>
+    <div id='Contact' className=' sm:p-10 flex flex-col bg-[#1A1814]'>
       <div className='sm:m-10 mt-10 justify-center flex flex-col items-center '>
         <h1 className=' header-font m-6 text-3xl  '>
           <span className=' text-Bilos-primary'>Contact</span>
-          <span className=' text-Bilos-third'> Us</span>{' '}
+          <span className=' text-slate-300'> Us</span>{' '}
         </h1>
-        <p className=' text-center text-font text-Bilos-fourth p-5'>
+        <p className=' text-center  text-slate-300 p-5'>
           kjbdfj ajlfklsof alfk.haef ,bfliekl lqfbjkefb adlsbfjfb
           lwbrjef mBFLkefjbnfbn BFJBMFB sbfnbfjbdj kjbdfj ajlfklsof
           alfk.hae;f ,bfliekl lqfbjkefb adlsbfjfb lwbrjef
@@ -47,7 +47,7 @@ function Contact() {
       <div
         className="bg-[url('./assests/images/contact1.png')] cursor-pointer
  bg-cover bg-center sm:justify-between  flex justify-center flex-wrap relative mt-24 sm:p-10 shadow-gray-600 shadow-sm rounded-2xl">
-        <div className='  relative m-6 items-center  rounded-2xl shadow-2xl bg-white bg-opacity-30'>
+        <div className=' relative m-6 flex flex-col sm:w-auto w-full items-center rounded-2xl pt-8 shadow-2xl bg-white bg-opacity-30 '>
           <div className='flex p-4 sm:m-8 w-72 transition  ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300 '>
             <GoLocation className=' bg-Bilos-primary text-white text-4xl m-2 rounded-full border-0 p-2 ' />
             <div className='flex flex-col text-Bilos-third'>
