@@ -45,10 +45,10 @@ function Contact() {
       </div>
 
       <div
-        className="bg-[url('./assests/images/contact1.png')] cursor-pointer
- bg-cover bg-center sm:justify-between  flex justify-center flex-wrap relative mt-24 sm:p-10 shadow-gray-600 shadow-sm rounded-2xl">
-        <div className=' relative m-6 flex flex-col sm:w-auto w-full items-center rounded-2xl pt-8 shadow-2xl bg-white bg-opacity-30 '>
-          <div className='flex p-4 sm:m-8 w-72 transition  ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300 '>
+        className="bg-[url('./assests/images/contact1.png')] 
+ bg-cover bg-center sm:justify-between  flex justify-center flex-wrap relative mt-24 sm:p-10 rounded-2xl">
+        <div className=' relative m-6 flex flex-col sm:w-auto w-full items-center rounded-2xl pt-8 sm:pt-0 shadow-2xl bg-white bg-opacity-30 '>
+          <div className='flex sm:cursor-pointer px-4 pt-1 sm:m-8 w-72 transition  ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300 '>
             <GoLocation className=' bg-Bilos-primary text-white text-4xl m-2 rounded-full border-0 p-2 ' />
             <div className='flex flex-col text-Bilos-third'>
               <h3 className='flex  text-2xl m-1 font-semibold text-Bilos-primary'>
@@ -87,7 +87,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className='flex  m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300'>
+          <div className='flex sm:cursor-pointer pb-2  m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300'>
             <BiTimeFive className=' bg-Bilos-primary text-white text-4xl m-2 rounded-full border-0 p-2 ' />
             <div className='flex flex-col text-Bilos-third'>
               <h3 className='flex  text-2xl m-1 font-semibold text-Bilos-primary'>
@@ -101,7 +101,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className='flex   m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300'>
+          <div className='flex sm:cursor-pointer pb-2  m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300'>
             <HiOutlineMail className='  text-white text-4xl m-2 rounded-full border-0 p-2 bg-Bilos-primary ' />
             <div className='flex flex-col text-Bilos-third'>
               <h3 className='flex  text-2xl m-1 font-semibold text-Bilos-primary'>
@@ -115,7 +115,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className='flex m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300'>
+          <div className='flex sm:cursor-pointer pb-2 m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300'>
             <BiPhoneCall className=' bg-Bilos-primary text-white  text-4xl m-2 rounded-full border-0 p-2  ' />
             <div className='flex flex-col text-Bilos-third'>
               <h3 className='flex  text-2xl font-semibold m-1 text-Bilos-primary'>
