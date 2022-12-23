@@ -1,10 +1,10 @@
-import { GoLocation } from "react-icons/go";
-import { BiTimeFive } from "react-icons/bi";
-import { HiOutlineMail } from "react-icons/hi";
-import { BiPhoneCall } from "react-icons/bi";
-import { useRef } from "react";
-import { AiOutlineArrowRight } from "react-icons/ai";
-import emailjs from "@emailjs/browser";
+import { GoLocation } from 'react-icons/go';
+import { BiTimeFive } from 'react-icons/bi';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BiPhoneCall } from 'react-icons/bi';
+import { useRef } from 'react';
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const form = useRef();
@@ -13,73 +13,73 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_tb5ijcn",
-        "template_xbmumyl",
+        'service_tb5ijcn',
+        'template_xbmumyl',
         form.current,
-        "WY7FSusrCEjpI50ng"
+        'WY7FSusrCEjpI50ng'
       )
       .then(
         (result) => {
           console.log(result.text);
         },
         (error) => {
-          console.log("Not working");
+          console.log('Not working');
         }
       );
     e.target.reset();
   };
 
   return (
-    <div id="Contact" className=" sm:m-10 flex flex-col bg-orange-50">
-      <div className="m-10 justify-center flex flex-col items-center ">
-        <h1 className=" header-font text-3xl  ">
-          <span className=" text-Bilos-primary">Contact</span>
-          <span className=" text-Bilos-third"> Us</span>{" "}
+    <div id='Contact' className=' sm:p-10 flex flex-col bg-[#1A1814]'>
+      <div className='sm:m-10 mt-10 justify-center flex flex-col items-center '>
+        <h1 className=' header-font m-6 text-3xl  '>
+          <span className=' text-Bilos-primary'>Contact</span>
+          <span className=' text-slate-300'> Us</span>{' '}
         </h1>
-        <p className=" text-center text-font text-Bilos-fourth w-2/4 p-5">
-          kjbdfj ajlfklsof alfk.haef ,bfliekl lqfbjkefb adlsbfjfb lwbrjef
-          mBFLkefjbnfbn BFJBMFB sbfnbfjbdj kjbdfj ajlfklsof alfk.hae;f ,bfliekl
-          lqfbjkefb adlsbfjfb lwbrjef mBFLkefjbnfbn BFJBMFB sbfnbfjbdj
+        <p className=' text-center  text-slate-300 p-5'>
+          kjbdfj ajlfklsof alfk.haef ,bfliekl lqfbjkefb adlsbfjfb
+          lwbrjef mBFLkefjbnfbn BFJBMFB sbfnbfjbdj kjbdfj ajlfklsof
+          alfk.hae;f ,bfliekl lqfbjkefb adlsbfjfb lwbrjef
+          mBFLkefjbnfbn BFJBMFB sbfnbfjbdj
         </p>
       </div>
 
       <div
-        className="bg-[url('./assests/images/contactback.png')] cursor-pointer
- bg-cover bg-center justify-between  flex  flex-wrap relative mt-24 sm:p-10 shadow-Bilos-secondary shadow-sm rounded-2xl"
-      >
-        <div className="  relative items-center    rounded-2xl shadow-2xl bg-orange-200 bg-opacity-30">
-          <div className="flex p-4 sm:m-8 w-72 transition  ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300 ">
-            <GoLocation className=" hover:bg-Bilos-primary hover:text-white text-Bilos-primary text-4xl m-2 rounded-full border-0 p-2 bg-orange-100 " />
-            <div className="flex flex-col text-Bilos-third">
-              <h3 className="flex  text-2xl font-bold text-font">
-                {" "}
-                Location:{" "}
+        className="bg-[url('./assests/images/contact1.png')] 
+ bg-cover bg-center sm:justify-between  flex justify-center flex-wrap relative mt-24 sm:p-10 rounded-2xl">
+        <div className=' relative m-6 flex flex-col sm:w-auto w-full items-center rounded-2xl pt-8 sm:pt-0 shadow-2xl bg-white bg-opacity-30 '>
+          <div className='flex sm:cursor-pointer px-4 pt-1 sm:m-8 w-72 transition  ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300 '>
+            <GoLocation className=' bg-Bilos-primary text-white text-4xl m-2 rounded-full border-0 p-2 ' />
+            <div className='flex flex-col text-Bilos-third'>
+              <h3 className='flex  text-2xl m-1 font-semibold text-Bilos-primary'>
+                {' '}
+                Location:{' '}
               </h3>
-              <div className="flex-col w-40 text-Bilos-fourth text-font">
-                <div className="flex mb-4">
-                  <AiOutlineArrowRight className="bg-Bilos-primary rounded-full text-white m-2" />
+              <div className='flex-col w-40 text-black text-font'>
+                <div className='flex mb-4'>
+                  <AiOutlineArrowRight className='bg-Bilos-primary rounded-full text-white m-2' />
                   Atlas branch | አትላስ <br />
                 </div>
-                <div className="flex mb-4">
-                  <AiOutlineArrowRight className="bg-Bilos-primary rounded-full text-white m-2" />
+                <div className='flex mb-4'>
+                  <AiOutlineArrowRight className='bg-Bilos-primary rounded-full text-white m-2' />
                   Lancha Branch | ላንቻ
                   <br />
                 </div>
-                <div className="flex mb-4">
-                  <AiOutlineArrowRight className="bg-Bilos-primary rounded-full text-white m-2" />
+                <div className='flex mb-4'>
+                  <AiOutlineArrowRight className='bg-Bilos-primary rounded-full text-white m-2' />
                   4 kilo | 4 ኪሎ
                   <br />
                 </div>
-                <div className="flex mb-4">
-                  <AiOutlineArrowRight className="bg-Bilos-primary rounded-full text-white m-2" />
+                <div className='flex mb-4'>
+                  <AiOutlineArrowRight className='bg-Bilos-primary rounded-full text-white m-2' />
                   Bole Snap building <br />
                 </div>
-                <div className="flex mb-4">
-                  <AiOutlineArrowRight className="bg-Bilos-primary rounded-full text-white m-2" />
-                  Sarbet | ሳር ቤት <br />{" "}
+                <div className='flex mb-4'>
+                  <AiOutlineArrowRight className='bg-Bilos-primary rounded-full text-white m-2' />
+                  Sarbet | ሳር ቤት <br />{' '}
                 </div>
-                <div className="flex mb-4">
-                  <AiOutlineArrowRight className="bg-Bilos-primary rounded-full text-white m-2" />
+                <div className='flex mb-4'>
+                  <AiOutlineArrowRight className='bg-Bilos-primary rounded-full text-white m-2' />
                   Karl Square | ካርል አደባባይ
                   <br />
                 </div>
@@ -87,53 +87,59 @@ function Contact() {
             </div>
           </div>
 
-          <div className="flex  m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300">
-            <BiTimeFive className=" hover:bg-Bilos-primary hover:text-white text-Bilos-primary text-4xl m-2 rounded-full border-0 p-2 bg-orange-100 " />
-            <div className="flex flex-col text-Bilos-third">
-              <h3 className="flex  text-2xl font-bold text-font">
-                {" "}
-                Open-Hours:{" "}
+          <div className='flex sm:cursor-pointer pb-2  m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300'>
+            <BiTimeFive className=' bg-Bilos-primary text-white text-4xl m-2 rounded-full border-0 p-2 ' />
+            <div className='flex flex-col text-Bilos-third'>
+              <h3 className='flex  text-2xl m-1 font-semibold text-Bilos-primary'>
+                {' '}
+                Open-Hours:{' '}
               </h3>
-              <p className=" w-40 text-Bilos-fourth text-font">
-                {" "}
+              <p className=' w-40 text-black text-font'>
+                {' '}
                 Monday-Saturday: 11:00 AM - 23:00 PM
               </p>
             </div>
           </div>
 
-          <div className="flex   m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300">
-            <HiOutlineMail className=" hover:bg-Bilos-primary hover:text-white text-Bilos-primary text-4xl m-2 rounded-full border-0 p-2 bg-orange-100 " />
-            <div className="flex flex-col text-Bilos-third">
-              <h3 className="flex  text-2xl font-bold text-font"> Email: </h3>
-              <p className=" w-40 text-Bilos-fourth text-font">
-                {" "}
+          <div className='flex sm:cursor-pointer pb-2  m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300'>
+            <HiOutlineMail className='  text-white text-4xl m-2 rounded-full border-0 p-2 bg-Bilos-primary ' />
+            <div className='flex flex-col text-Bilos-third'>
+              <h3 className='flex  text-2xl m-1 font-semibold text-Bilos-primary'>
+                {' '}
+                Email:{' '}
+              </h3>
+              <p className=' w-40 text-black text-font'>
+                {' '}
                 info@example.com contact@example.com
               </p>
             </div>
           </div>
 
-          <div className="flex m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300">
-            <BiPhoneCall className=" hover:bg-Bilos-primary hover:text-white text-Bilos-primary text-4xl m-2 rounded-full border-0 p-2 bg-orange-100 " />
-            <div className="flex flex-col text-Bilos-third">
-              <h3 className="flex  text-2xl font-bold text-font"> Call: </h3>
-              <p className=" w-32 text-Bilos-fourth text-font">
-                {" "}
+          <div className='flex sm:cursor-pointer pb-2 m-8 w-64 transition ease-in-out delay-150 hover:-translate-y-1 hover:rounded-xl rounded-xl hover:scale-110 hover:bg-white duration-300'>
+            <BiPhoneCall className=' bg-Bilos-primary text-white  text-4xl m-2 rounded-full border-0 p-2  ' />
+            <div className='flex flex-col text-Bilos-third'>
+              <h3 className='flex  text-2xl font-semibold m-1 text-Bilos-primary'>
+                {' '}
+                Call:{' '}
+              </h3>
+              <p className=' w-32 text-black text-font'>
+                {' '}
                 +1 5589 55488 51 +1 5589 22475 14
               </p>
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap  text-font ">
-          <div className="block p-6 rounded-lg shadow-2xl  max-w-md">
-            <h1 className=" header-font bg-white bg-opacity-30 rounded-md p-2 text-Bilos-third m-6 text-center text-4xl ">
-              Contact Form{" "}
+        <div className='flex flex-wrap  text-font h-[480px] '>
+          <div className='block p-6 rounded-lg shadow-2xl   max-w-md'>
+            <h1 className=' header-font  bg-white bg-opacity-30 rounded-md p-2 text-Bilos-primary m-6 text-center text-3xl '>
+              Contact Form{' '}
             </h1>
             <form ref={form} onSubmit={sendEmail}>
-              <div className="flex">
-                <div className="form-group mr-3 mb-6">
+              <div className='flex'>
+                <div className='form-group mr-3 mb-6'>
                   <input
-                    type="text"
-                    className="form-control block
+                    type='text'
+                    className='form-control block
         w-full
         px-3
         py-1.5
@@ -146,16 +152,16 @@ function Contact() {
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                    name="user_name"
-                    placeholder="Name"
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none'
+                    name='user_name'
+                    placeholder='Name'
                     required
                   />
                 </div>
-                <div className="form-group mb-6">
+                <div className='form-group mb-6'>
                   <input
-                    type="email"
-                    className="form-control block
+                    type='email'
+                    className='form-control block
         w-full
         px-3
         py-1.5
@@ -168,17 +174,17 @@ function Contact() {
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                    name="user_email"
-                    placeholder="Email address"
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none'
+                    name='user_email'
+                    placeholder='Email address'
                     required
                   />
                 </div>
               </div>
-              <div className="form-group mb-6">
+              <div className='form-group mb-6'>
                 <input
-                  type="text"
-                  className="form-control block
+                  type='text'
+                  className='form-control block
         w-full
         px-3
         py-1.5
@@ -190,16 +196,16 @@ function Contact() {
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  name="subject"
-                  placeholder="Subject"
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none'
+                  name='subject'
+                  placeholder='Subject'
                   required
                 />
               </div>
 
-              <div className="form-group mb-6">
+              <div className='form-group mb-6'>
                 <textarea
-                  className="
+                  className='
         form-control
         block
         w-full
@@ -215,18 +221,17 @@ function Contact() {
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-      "
-                  name="message"
+      '
+                  name='message'
                   required
-                  rows="5"
-                  placeholder="Message"
-                ></textarea>
+                  rows='5'
+                  placeholder='Message'></textarea>
               </div>
 
               <button
-                type="submit"
-                value="Send"
-                className="
+                type='submit'
+                value='Send'
+                className='
       w-full
       px-6
       py-2.5
@@ -243,8 +248,7 @@ function Contact() {
       active:bg-Bilos-primary active:shadow-lg
       transition
       duration-150
-      ease-in-out"
-              >
+      ease-in-out'>
                 Send Message
               </button>
             </form>
