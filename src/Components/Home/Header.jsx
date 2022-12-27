@@ -6,7 +6,10 @@ import LogoTwo from "../../assests/logo/logo-two.png";
 import { ACTION, headerState, reducer } from "../../reducer";
 
 function Header() {
-  const [state, dispatch] = useReducer(reducer, headerState);
+  const [state, dispatch] = useReducer(reducer, {
+    ...headerState,
+    Home: "text-Bilos-primary",
+  });
 
   useEffect(() => {
     function handelScroll(e) {
@@ -33,14 +36,14 @@ function Header() {
     window.addEventListener("scroll", handelScroll);
     return () => window.removeEventListener("scroll", handelScroll);
   });
-const navigation = ["Home", "About", "Menu", "Events", "Gallery", "Contact"];
+  const navigation = ["Home", "About", "Menu", "Events", "Gallery", "Contact"];
   const handelListClick = () => {
     dispatch({ type: ACTION.LISTCLICK });
   };
-const dispachAction=(action)=>{
-handelListClick()
- dispatch({ type:action });
-}
+  const dispachAction = (action) => {
+    handelListClick();
+    dispatch({ type: action });
+  };
   return (
     <div className="flex justify-around sm:justify-between sm:px-14   lg:px-0 lg:justify-around   items-center py-2 bg-black bg-opacity-60 text-white fixed top-0 w-full z-30 ">
       <div className="flex flex-nowrap gap-2 items-center cursor-pointer">
@@ -61,8 +64,7 @@ handelListClick()
             "flex flex-col justify-center items-center h-full w-full  lg:flex-row lg:justify-self-auto gap-8     font-sans  "
           }
         >
-
-        {navigation.map((item, index) => {
+          {navigation.map((item, index) => {
             return (
               <Anchor
                 key={index + 1}
@@ -72,21 +74,21 @@ handelListClick()
               />
             );
           })}
-
         </ul>
       </nav>
-      <a 
-        href="#Contact" className=" px-10 py-1 border-Bilos-primary  border-2 rounded-full font-sans font-semibold transition-all ease-linear duration-200 hover:scale-105 hover:bg-orange-500 hidden lg:block">
+      <a
+        href="#Contact"
+        className=" px-10 py-1 border-Bilos-primary  border-2 rounded-full font-sans font-semibold transition-all ease-linear duration-200 hover:scale-105 hover:bg-orange-500 hidden lg:block"
+      >
         Location
       </a>
-     
-        <button onClick={handelListClick}>
-          <BsList
-            size={40}
-            className="text-Bilos-primary lg:hidden cursor-pointer relative z-40 "
-          />
-        </button>
-      
+
+      <button onClick={handelListClick}>
+        <BsList
+          size={40}
+          className="text-Bilos-primary lg:hidden cursor-pointer relative z-40 "
+        />
+      </button>
     </div>
   );
 }

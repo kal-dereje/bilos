@@ -13,7 +13,7 @@ function Menu() {
   return (
     <div
       id="Menu"
-      className="min-h-screen flex flex-col items-start gap-10 md:pt-52 pt-32 bg-[#1A1814]"
+      className="min-h-screen flex flex-col items-start gap-10 md:pt-40 pt-32 bg-[#1A1814]"
     >
       <h1 className="text-slate-300 font-Pacifico text-4xl md:pl-32 pl-10">
         Check our tasty <span className="text-Bilos-primary">Menu</span>
@@ -58,7 +58,7 @@ function Menu() {
           if (selectedMenu === "Show All") {
             return (
               <Menulist
-              img={item.img}
+                img={item.img}
                 menu={item.menu}
                 price={item.price}
                 descripton={item.description}
@@ -69,7 +69,7 @@ function Menu() {
           return (
             item.type === selectedMenu && (
               <Menulist
-              img={item.img}
+                img={item.img}
                 menu={item.menu}
                 price={item.price}
                 description={item.description}
@@ -85,22 +85,24 @@ function Menu() {
 
 export default Menu;
 
-const Menulist = ({img, menu, price, description }) => {
+const Menulist = ({ img, menu, price, description }) => {
   return (
     <div className="w-full lg:w-[90%] flex  items-center gap-4 font-Kanit font-bold text-lg animate-grow ">
-      
-         <img
-                      src={img}
-                      className="w-16 h-16 rounded-full bg-center border-4  border-[#484643] "
-                    />
-      
+      <img
+        src={img}
+        className="w-16 h-16 rounded-full bg-center border-4  border-[#484643] "
+      />
 
       <div className="flex-grow">
         <div className="flex justify-between items-center w-full ">
           <p className=" pr-1 text-slate-300">{menu}</p>
           <div className=" border-b border-dashed  border-Bilos-fourth flex-grow"></div>
-          <p className="text-Bilos-primary
-           pl-1">{price}</p>
+          <p
+            className="text-Bilos-primary
+           pl-1"
+          >
+            {price}
+          </p>
         </div>
         <p className="text-Bilos-fourth text-sm font-extralight italic">
           {description}
