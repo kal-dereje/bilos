@@ -1,66 +1,31 @@
 import { useState } from "react";
 import Left from "./LeftSection";
 import Right from "./RightSection";
+const About = () => {
+  const [playButton, setPlayButton] = useState(true);
+  const handelClick = () => {
+    if (playButton) document.getElementById("video").play();
+    else document.getElementById("video").pause();
 
-function About() {
+    setPlayButton((prev) => {
+      return !prev;
+    });
+  };
   return (
-    <div id="About" className="bg-orange-50">
-      <div className=" flex flex-col gap-10 lg:gap-0 lg:flex-row items-center ">
-        <Left />
-        <Right />
-      </div>
-      <div className="flex flex-col justify-center items-center gap-10 mt-32">
-        <h1 className="font-Pacifico text-3xl text-slate-800 text-center">
-          Why choose Our Restaurant
-        </h1>
-        <p className="font-Kanit font-bold text-center w-3/5 sm:w-2/5 text-Bilos-third">
-          Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
-          adipisci expedita at voluptas atque vitae autem.
-        </p>
-        <div className="flex flex-col lg:flex-row justify-center  gap-20">
-          <Box
-            number={"01"}
-            title={"Lorem Ipsum"}
-            descripton=" Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur
-        ducimus vero placeat"
-          />
-          <Box
-            number={"02"}
-            title={"Repellat Nihil"}
-            descripton=" Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur
-        ducimus vero placeat"
-          />
-          <Box
-            number={"03"}
-            title={"Ad ad velit qui"}
-            descripton=" Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur
-        ducimus vero placeat"
-          />
+    <div
+      className="h-auto md:h-screen w-full bg-[url('./assests/images/About2.jpg')]"
+      id="About"
+    >
+      <div className="w-full h-full overflow-hidden  bg-black bg-opacity-40 grid md:grid-cols-2 place-items-center">
+        <div className=" ">
+          <Left />
+        </div>
+        <div className="flex items-center justify-center">
+          <Right handelClick={handelClick} playButton={playButton} />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default About;
-
-const Box = ({ number, title, descripton }) => {
-  const [bannerColor, setBannerColor] = useState("text-Bilos-primary");
-  return (
-    <div
-      onMouseEnter={() => setBannerColor("text-white")}
-      onMouseLeave={() => setBannerColor("text-Bilos-primary")}
-      className="w-11/12 lg:w-1/4 h-1/3 flex flex-col gap-5 justify-around items-left  px-10 py-12 shadow-custom transition-all duration-300 hover:text-white hover:bg-Bilos-primary cursor-pointer hover:py-6 bg-green-50"
-    >
-      <h1
-        className={
-          "font-Kanit font-extrabold text-3xl  hover:text-white " + bannerColor
-        }
-      >
-        {number}
-      </h1>
-      <h2 className="font-Courgette font-bold text-2xl">{title}</h2>
-      <p className="font-Kanit ">{descripton}</p>
-    </div>
-  );
-};

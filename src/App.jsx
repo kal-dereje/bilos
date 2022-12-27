@@ -6,7 +6,6 @@ import { CgArrowUp } from "react-icons/cg";
 import { reducer, ACTION, headerState } from "./reducer";
 import Location from "./Components/Location/Location";
 import Contact from "./Components/Contact/Contact";
-import Specials from "./Components/Specials/Specials";
 import Events from "./Components/Events/Events";
 import Gallery from "./Components/Gallery/Gallery";
 
@@ -18,14 +17,13 @@ function App() {
       <Home />
       <About />
       <Menu />
-      <Specials />
       <Events />
       <Gallery />
       <Contact />
       <Location />
       <a
         href="#Home"
-        className="fixed right-10 bottom-10 text-white bg-Bilos-primary p-2 rounded-full animate-bounce "
+        className="fixed right-6 bottom-4 text-white bg-Bilos-primary p-2 rounded-full animate-bounce z-50"
       >
         <CgArrowUp size={30} />
       </a>
