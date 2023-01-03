@@ -1,7 +1,7 @@
 import { AiFillCheckCircle } from "react-icons/ai";
 const Left = () => {
   return (
-    <div className=" mx-auto  text-lg w-[80%]  text-slate-300  mt-20 mb-16 lg:mb-0 lg:mt-0">
+    <div className="  text-lg w-[80%]  text-slate-300  mt-20 mb-16 lg:mb-0 lg:mt-0 ml-4 mr-8">
       <p className="mb-10 text-Bilos-primary text-xl">About_____________</p>
       <div className="text-2xl mb-3 font-medium sm:text-lg">
         Bilos is seen as a second home by many not only for their tasty food.

@@ -13,7 +13,7 @@ function Menu() {
   return (
     <div
       id="Menu"
-      className="min-h-screen flex flex-col items-start gap-10 md:pt-40 pt-32 bg-[#1A1814]"
+      className="h-[800px] lg:h-screen flex flex-col items-start gap-10 md:pt-40 pt-32 bg-[#1A1814] pb-32"
     >
       <h1 className="text-slate-300 font-Pacifico text-4xl md:pl-32 pl-10">
         Check our tasty <span className="text-Bilos-primary">Menu</span>
