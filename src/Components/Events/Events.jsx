@@ -1,5 +1,5 @@
 import React from "react";
-import event from "../../assests/images/event.jpg";
+
 import happy from "../../assests/images/happy.jpg";
 import parties from "../../assests/images/parties.jpg";
 import wd from "../../assests/images/wd.jpg";
@@ -17,10 +17,10 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 function Events() {
   return (
     <div
-      className="w-full  min-h-screen bg-[url('./assests/images/event.jpg')] "
+      className="w-full h-[900px] lg:h-screen  bg-[url('./assests/images/event.jpg')] "
       id="Events"
     >
-      <div className="  w-full min-h-screen  bg-black bg-opacity-80  ">
+      <div className="  w-full h-[900px] lg:h-screen bg-black bg-opacity-80   ">
         <div className=" pt-20 pl-8 md:pl-20 text-2xl font-bold font-serif text-white text-opacity-70 ">
           Event______
         </div>
@@ -38,8 +38,7 @@ function Events() {
             pagination={{
               clickable: true,
             }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Pagination]}
             className="mySwiper  "
           >
             <SwiperSlide className="w-full  ">

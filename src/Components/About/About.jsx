@@ -13,14 +13,14 @@ const About = () => {
   };
   return (
     <div
-      className="h-auto md:h-screen w-full bg-[url('./assests/images/About2.jpg')]"
+      className="h-auto lg:h-screen w-full bg-[url('./assests/images/About2.jpg')]"
       id="About"
     >
       <div className="w-full h-full overflow-hidden  bg-black bg-opacity-40 grid md:grid-cols-2 place-items-center">
-        <div className=" ">
+        <div className=" flex  items-start justify-start sm:justify-end">
           <Left />
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex w-full  items-start justify-start">
           <Right handelClick={handelClick} playButton={playButton} />
         </div>
       </div>

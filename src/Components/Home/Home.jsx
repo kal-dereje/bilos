@@ -30,13 +30,15 @@ function Home() {
           >
             Our Menu
           </a>
-          <a  href='#About'
-          className=" text-white  flex transition-all ease-linear duration-200 hover:scale-105 py-1 gap-2 hover:text-Bilos-primary cursor-pointer " >
-                <div className="">
-                  <AiFillPlayCircle size="30" />
-                </div>
-                Watch Video
-              </a>
+          <a
+            href="#About"
+            className=" text-white  flex transition-all ease-linear duration-200 hover:scale-105 py-1 gap-2 hover:text-Bilos-primary cursor-pointer "
+          >
+            <div className="">
+              <AiFillPlayCircle size="30" />
+            </div>
+            Watch Video
+          </a>
         </div>
       </div>
     </div>
